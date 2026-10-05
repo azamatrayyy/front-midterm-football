@@ -78,5 +78,5 @@ Bootstrap 5 is included on the match schedule and tryout pages. The match table 
 
 ## Project Links
 
-- GitHub repository: [azamatrayyy/front_midterm_studentclub](https://github.com/azamatrayyy/front_midterm_studentclub)
-- GitHub Pages website: 
+- GitHub repository: https://github.com/azamatrayyy/front-midterm-football.git
+- GitHub Pages website: https://azamatrayyy.github.io/front-midterm-football/
