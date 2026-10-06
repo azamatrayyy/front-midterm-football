@@ -52,11 +52,12 @@ Gallery photo wrappers use `position: relative`, allowing each photo badge to us
 
 ### Image Loading
 
-Images have descriptive `alt` text. The current image elements do not set `loading="lazy"`; lazy loading can be added to below-the-fold images as a follow-up performance improvement.
+Images have descriptive `alt` text. The current image elements  set `loading="lazy"`;
 
 ## 4. Responsive Design & Bootstrap Integration
 
 The stylesheet includes an `@media (max-width: 768px)` rule. At this width, the header and navigation list change to a vertical flex layout, and the tryout form section becomes wider relative to the page.
+Also includes `@media (max-width : 568px)`  which changes photo to vertical and navigation list to a vertical side.
 
 Bootstrap 5 is included on the match schedule and tryout pages. The match table uses `.container` and `.table`; the form inputs use `.form-control`, and each input group uses `.mb-3`. The current pages do not use Bootstrap `.row` or `.col-*` classes; the gallery layout is implemented with CSS Grid.
 
