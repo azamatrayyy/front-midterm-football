@@ -48,7 +48,7 @@ For the Endterm Project, the original Midterm website has been extended with int
 
 | Member Name | Primary Pages | Core Features Implemented | Key Technical Focus |
 | --- | --- | --- | --- |
-| Azamat Ray | `index.html`, `about.html` | Home and club information, shared page structure, navigation, Flexbox header and footer, CSS variables | Semantic HTML and base styling | Client-side registration validation, RegEx email check |
+| Azamat Ray | `index.html`, `about.html` | Home and club information, shared page structure, navigation, Flexbox header and footer, CSS variables | Semantic HTML and base styling ,  Client-side registration validation, RegEx email check |
 | Abylaikhan | `matches.html`, `gallery.html` | Dynamic CRUD match schedule table, interactive photo gallery with Lightbox and navigation arrows | DOM manipulation, CRUD operations, jQuery effects |
 | Isaali | `contact.html`, `README.md` |  Password strength indicator, live search and category filter | Form validation, RegEx, real-time filtering, documentation |
 
