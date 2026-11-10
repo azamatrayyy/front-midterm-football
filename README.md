@@ -2,82 +2,63 @@
 
 ## 1. Executive Summary & Topic Overview
 
-The AITU Football Club Official Website is a student project introducing the football club at Astana IT University. Its purpose is to promote the club, share information about training and matches, show football photos, and give interested students a way to enquire about tryouts.
+The AITU Football Club Official Website is a student project introducing the football club at Astana IT University. Its purpose is to promote the club, share information about training and matches, show football photos, and give interested students a way to register for tryouts.
 
-The target audience is AITU students, prospective club members, and people interested in the club. The main objectives are to:
-
-- Present the club and its values in a clear, welcoming way.
-- Make match and training information easy to find.
-- Introduce the team through a photo gallery.
-- Provide a simple tryout enquiry form.
-- Connect the project pages through consistent navigation.
+For the Endterm Project, the original Midterm website has been extended with interactive JavaScript and jQuery functionality in `js/script.js` while preserving the original HTML structure, CSS variables, and responsive layout.
 
 ## 2. Page Structure & Navigation Breakdown
 
-The website is organized into five pages. A shared header navigation and footer links help visitors move between them.
-
-| Page | Purpose and content |
+| Page | Purpose and Interactive Features |
 | --- | --- |
-| `index.html` — Home | Introduces the club with a hero heading and training photo. It highlights an upcoming fixture, training days and times, the location, and club values. |
-| `about.html` — About Us | Describes why the club was created, its mission, and values such as fair play, leadership, unity, and respect. |
-| `matches.html` — Match Schedule | Presents upcoming fixtures in a table with dates, opponents, locations, and kickoff times. The current table is a schedule; completed results and competition status are not displayed. |
-| `gallery.html` — Squad Gallery | Shows football photos in a three-column grid with labels for training, match day, and team practice. The current gallery presents photos rather than individual player profiles or roster statistics. |
-| `contact.html` — Tryouts & Contact | Provides a name and email form for students interested in tryouts. The form is a front-end example and does not currently submit to a server or display separate contact details. |
+| `index.html` — Home | Introduces the club with a hero section, upcoming fixture summary, training schedule, location, and club values. |
+| `about.html` — About Us | Describes the club's background, mission, and core values. |
+| `matches.html` — Match Schedule | Features **2.2 Real-Time Search & Category Filter** (`All`, `Friendly`, `League`, `Cup`) and **2.3 Dynamic CRUD Table** (Create, Read, Update, Delete matches with confirmation). |
+| `gallery.html` — Squad Gallery | Features **2.4 Responsive Image Gallery with Lightbox** on click, navigation arrows, and smooth jQuery transitions (`.fadeIn()`, `.fadeOut()`, `.animate()`). |
+| `contact.html` — Tryouts & Contact | Features **2.1 Client-Side Registration Form Validation** with required field checks, RegEx email validation, visual password strength meter (Weak / Medium / Strong), password confirmation matching, real-time DOM/jQuery feedback, and submission blocking on error. |
 
-## 3. Technical Implementation & Compliance
+## 3. Endterm Requirements Implementation
 
-### Semantic HTML5
+### 2.1 Form Validation (`contact.html` & `js/script.js`)
+- Validates required fields: Name (`#player-name`), Email (`#player-email`), Password (`#player-password`), Confirm Password (`#player-confirm-password`), and Message (`#player-message`).
+- Checks email format using a Regular Expression (`RegEx`).
+- Displays a real-time password strength indicator (`Weak`, `Medium`, `Strong`) with visual color and width transitions.
+- Verifies that the password and confirmation password match.
+- Provides real-time feedback using Bootstrap `.is-valid` / `.is-invalid` classes, feedback messages, and Bootstrap alerts (`#form-alert`).
+- Blocks submission and displays an error alert if any field is invalid.
 
-The pages use semantic `<header>`, `<nav>`, `<main>`, and `<footer>` elements for shared page structure. The match schedule uses a `<table>` with `<tr>`, `<th>`, and `<td>` elements. The tryout page uses a `<form>` with labels, text and email inputs, and a submit button. Images include alternative text.
+### 2.2 Search and Filter (`matches.html` & `js/script.js`)
+- Filters the match table in real time as the user types using `.keyup()`.
+- Includes category filter buttons (`All`, `Friendly`, `League`, `Cup`) that work both independently and together with the search input.
+- Performs case-insensitive matching without reloading the page.
 
-### CSS Variables
+### 2.3 Table with CRUD (`matches.html` & `js/script.js`)
+- **Create:** Adds new match records dynamically via the match form (`#crud-form`).
+- **Read:** Renders all match records dynamically into `#matches-tbody`.
+- **Update:** Loads an existing row into the form when clicking `Edit` and updates the record in place.
+- **Delete:** Asks for user confirmation via `confirm()` and removes the row with a `.fadeOut()` transition.
 
-The shared stylesheet defines the requested custom properties in `:root`:
+### 2.4 Image Gallery (`gallery.html` & `js/script.js`)
+- Responsive grid layout built with HTML, CSS Grid, and Bootstrap.
+- Opens a full-screen lightbox (`#lightbox-overlay`) when clicking any gallery image, complete with Previous (`❮`) and Next (`❯`) navigation arrows.
+- Uses jQuery `.fadeIn()`, `.fadeOut()`, and `.animate()` for smooth visual transitions.
 
-- `--primary-color: #123c2d` for the club's dark green.
-- `--accent-color: #f2b705` for the gold accent.
-- `--main-font: 'Montserrat', sans-serif` for the main typeface.
-
-The header and primary link button use CSS variables. The other site rules use direct CSS values.
-
-### Layout Systems
-
-- **Flexbox:** The header and footer use `display: flex`, `justify-content: space-between`, and `align-items: center` to align their contents.
-- **CSS Grid:** The gallery uses `display: grid`, `grid-template-columns: repeat(3, 1fr)`, and a `20px` gap to arrange photos in three columns.
-- **Bootstrap:** The schedule table is wrapped in `.container` and uses `.table`. The tryout form uses `.form-control` and `.mb-3`.
-
-### Positioning and Interaction
-
-Gallery photo wrappers use `position: relative`, allowing each photo badge to use `position: absolute` and sit over its image. The schedule uses `:nth-child(even)` to alternate the background color of even table rows. The tryout button has `:hover` and `:focus` styles.
-
-### Image Loading
-
-Images have descriptive `alt` text. The current image elements  set `loading="lazy"`;
-
-## 4. Responsive Design & Bootstrap Integration
-
-The stylesheet includes an `@media (max-width: 768px)` rule. At this width, the header and navigation list change to a vertical flex layout, and the tryout form section becomes wider relative to the page.
-Also includes `@media (max-width : 568px)`  which changes photo to vertical and navigation list to a vertical side.
-
-Bootstrap 5 is included on the match schedule and tryout pages. The match table uses `.container` and `.table`; the form inputs use `.form-control`, and each input group uses `.mb-3`. The current pages do not use Bootstrap `.row` or `.col-*` classes; the gallery layout is implemented with CSS Grid.
-
-## 5. Individual Contributions Matrix
+## 4. Individual Contributions Matrix
 
 | Member Name | Primary Pages | Core Features Implemented | Key Technical Focus |
-| ----------- | ------------- | ------------------------- | ------------------- |
-| Azamat Ray | `index.html`, `about.html` | Home and club information, shared page structure, navigation, Flexbox header and footer, CSS variables | Semantic HTML and base styling |
-| Abylaikhan | `matches.html`, `gallery.html` | Match schedule table, squad photo gallery, gallery badges, alternating table rows | CSS Grid, positioning, and pseudo-classes |
-| Isaali | `contact.html`, `README.md` | Tryout enquiry form, Bootstrap form classes, responsive media query, project report | Forms, Bootstrap integration, and responsiveness |
+| --- | --- | --- | --- |
+| Azamat Ray | `index.html`, `about.html` | Home and club information, shared page structure, navigation, Flexbox header and footer, CSS variables | Semantic HTML and base styling | Client-side registration validation, RegEx email check |
+| Abylaikhan | `matches.html`, `gallery.html` | Dynamic CRUD match schedule table, interactive photo gallery with Lightbox and navigation arrows | DOM manipulation, CRUD operations, jQuery effects |
+| Isaali | `contact.html`, `README.md` |  Password strength indicator, live search and category filter | Form validation, RegEx, real-time filtering, documentation |
 
-## Technologies
+## 5. Technologies
 
 - HTML5
-- CSS3, including Flexbox, CSS Grid, custom properties, and media queries
-- Bootstrap 5
-- Git and GitHub
-- GitHub Pages for project hosting
+- CSS3 (Flexbox, CSS Grid, custom properties, media queries)
+- Bootstrap 5.3.3
+- JavaScript (DOM manipulation, events, objects, arrays, RegEx)
+- jQuery 3.7.1
 
-## Project Links
+## 6. Project Links
 
 - GitHub repository: https://github.com/azamatrayyy/front-midterm-football.git
 - GitHub Pages website: https://azamatrayyy.github.io/front-midterm-football/
