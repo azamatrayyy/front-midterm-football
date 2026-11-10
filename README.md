@@ -16,6 +16,8 @@ For the Endterm Project, the original Midterm website has been extended with int
 | `gallery.html` — Squad Gallery | Features **2.4 Responsive Image Gallery with Lightbox** on click, navigation arrows, and smooth jQuery transitions (`.fadeIn()`, `.fadeOut()`, `.animate()`). |
 | `contact.html` — Tryouts & Contact | Features **2.1 Client-Side Registration Form Validation** with required field checks, RegEx email validation, visual password strength meter (Weak / Medium / Strong), password confirmation matching, real-time DOM/jQuery feedback, and submission blocking on error. |
 
+
+
 ## 3. Endterm Requirements Implementation
 
 ### 2.1 Form Validation (`contact.html` & `js/script.js`)
