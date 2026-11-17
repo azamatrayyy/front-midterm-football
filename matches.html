@@ -17,49 +17,56 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="matches.html">Matches</a></li>
+        <li><a href="matches.html" aria-current="page">Matches</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="header-tools">
+      <button type="button" id="theme-toggle" aria-pressed="false">Dark theme</button>
+      <span id="user-name"></span>
+      <a id="sign-in-link" href="signin.html">Sign in</a>
+      <button type="button" id="sign-out" hidden>Sign out</button>
+    </div>
   </header>
 
   <main>
     <div class="container">
       <h1>Match Schedule</h1>
+      <p class="demo-note">This is a sample club schedule. Your changes are saved only in this browser.</p>
 
       <div class="crud-form-box mb-4">
         <h3 id="crud-form-title">Add New Match</h3>
-        <div id="crud-alert" class="alert" style="display: none;"></div>
+        <div id="crud-alert" class="alert"></div>
         <form id="crud-form" class="row g-2" novalidate>
           <div class="col-md-2">
-            <input type="text" id="match-date" class="form-control" placeholder="Date (e.g. Oct 31)" required>
+            <input type="text" id="match-date" aria-label="Date" class="form-control" placeholder="Date (e.g. Oct 31)" required>
           </div>
           <div class="col-md-3">
-            <input type="text" id="match-teams" class="form-control" placeholder="Match (e.g. AITU FC vs. NU)" required>
+            <input type="text" id="match-teams" aria-label="Teams" class="form-control" placeholder="Match (e.g. AITU FC vs. NU)" required>
           </div>
           <div class="col-md-2">
-            <select id="match-category" class="form-select" required>
+            <select id="match-category" aria-label="Category" class="form-select" required>
               <option value="Friendly">Friendly</option>
               <option value="League">League</option>
               <option value="Cup">Cup</option>
             </select>
           </div>
           <div class="col-md-3">
-            <input type="text" id="match-location" class="form-control" placeholder="Location" required>
+            <input type="text" id="match-location" aria-label="Location" class="form-control" placeholder="Location" required>
           </div>
           <div class="col-md-2">
-            <input type="text" id="match-time" class="form-control" placeholder="Time (e.g. 4:00 PM)" required>
+            <input type="text" id="match-time" aria-label="Time" class="form-control" placeholder="Time (e.g. 4:00 PM)" required>
           </div>
           <div class="col-12 mt-2">
-            <button type="button" id="save-match-btn" class="form-button">Add Match</button>
-            <button type="button" id="cancel-edit-btn" class="category-btn" style="display: none;">Cancel</button>
+            <button type="submit" id="save-match-btn" class="form-button">Add Match</button>
+            <button type="button" id="cancel-edit-btn" class="category-btn">Cancel</button>
           </div>
         </form>
       </div>
 
       <div class="filter-controls mb-3">
-        <input type="text" id="match-search" class="form-control mb-2" placeholder="Search by date, match, category, location, or time...">
+        <input type="text" id="match-search" aria-label="Search matches" class="form-control mb-2" placeholder="Search by date, match, category, location, or time...">
         <div class="category-buttons">
           <button type="button" class="category-btn active-category">All</button>
           <button type="button" class="category-btn">Friendly</button>
@@ -68,7 +75,7 @@
         </div>
       </div>
 
-      <table class="table" id="matches-table">
+      <div class="table-scroll" tabindex="0" aria-label="Match schedule"><table class="table" id="matches-table">
         <thead>
           <tr>
             <th>Date</th>
@@ -80,7 +87,8 @@
           </tr>
         </thead>
         <tbody id="matches-tbody"></tbody>
-      </table>
+      </table></div>
+      <p id="match-empty" hidden>No matches found. Try another search or category.</p>
     </div>
   </main>
 
@@ -93,7 +101,7 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

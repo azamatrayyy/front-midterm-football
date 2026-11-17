@@ -19,17 +19,24 @@
         <li><a href="about.html">About</a></li>
         <li><a href="matches.html">Matches</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
       </ul>
     </nav>
+    <div class="header-tools">
+      <button type="button" id="theme-toggle" aria-pressed="false">Dark theme</button>
+      <span id="user-name"></span>
+      <a id="sign-in-link" href="signin.html">Sign in</a>
+      <button type="button" id="sign-out" hidden>Sign out</button>
+    </div>
   </header>
 
   <main>
     <div class="form-section">
       <h1>Join the Team</h1>
-      <p>Send us your details and we will contact you about football tryouts.</p>
+      <p>Practice filling in a tryout form and tell us about your football experience.</p>
 
-      <div id="form-alert" class="alert" style="display: none;"></div>
+      <p class="demo-note">Demo form: details are checked in your browser. Nothing is sent to the club, and passwords are never saved.</p>
+      <div id="form-alert" role="status" class="alert"></div>
 
       <form id="registration-form" novalidate>
         <div class="mb-3">
@@ -71,7 +78,7 @@
           <div class="valid-feedback" id="message-valid"></div>
         </div>
 
-        <button class="form-button" type="button" id="submit-btn">Send</button>
+        <button class="form-button" type="submit" id="submit-btn">Check registration</button>
       </form>
     </div>
   </main>
@@ -85,7 +92,7 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

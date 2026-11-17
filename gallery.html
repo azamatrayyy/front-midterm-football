@@ -18,37 +18,43 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="matches.html">Matches</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="header-tools">
+      <button type="button" id="theme-toggle" aria-pressed="false">Dark theme</button>
+      <span id="user-name"></span>
+      <a id="sign-in-link" href="signin.html">Sign in</a>
+      <button type="button" id="sign-out" hidden>Sign out</button>
+    </div>
   </header>
 
   <main>
     <div class="container">
       <h1>Club Gallery</h1>
       <div class="gallery" id="club-gallery">
-        <div class="gallery-photo">
+        <div class="gallery-photo" role="button" tabindex="0" aria-label="Open photo">
           <img src="training.png" alt="AITU football players training" loading="lazy">
           <p class="photo-badge">Training</p>
         </div>
-        <div class="gallery-photo">
+        <div class="gallery-photo" role="button" tabindex="0" aria-label="Open photo">
           <img src="matchday.jpg" alt="AITU football players preparing for a match" loading="lazy">
           <p class="photo-badge">Match Day</p>
         </div>
-        <div class="gallery-photo">
+        <div class="gallery-photo" role="button" tabindex="0" aria-label="Open photo">
           <img src="practice.jpg" alt="AITU football players practicing together" loading="lazy">
           <p class="photo-badge">Team Practice</p>
         </div>
-        <div class="gallery-photo">
+        <div class="gallery-photo" role="button" tabindex="0" aria-label="Open photo">
           <img src="person.avif" alt="AITU football squad celebration after victory" loading="lazy">
           <p class="photo-badge">Match Day</p>
         </div>
-        <div class="gallery-photo">
+        <div class="gallery-photo" role="button" tabindex="0" aria-label="Open photo">
           <img src="training.png" alt="Evening conditioning session on the pitch" loading="lazy">
           <p class="photo-badge">Training</p>
         </div>
-        <div class="gallery-photo">
+        <div class="gallery-photo" role="button" tabindex="0" aria-label="Open photo">
           <img src="practice.jpg" alt="Tactical passing drills before tournament" loading="lazy">
           <p class="photo-badge">Team Practice</p>
         </div>
@@ -56,14 +62,14 @@
     </div>
   </main>
 
-  <div id="lightbox-overlay" style="display: none;">
-    <button type="button" id="lightbox-close">&times;</button>
-    <button type="button" id="lightbox-prev">&#10094;</button>
+  <div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Club photo">
+    <button type="button" id="lightbox-close" aria-label="Close photo">&times;</button>
+    <button type="button" id="lightbox-prev" aria-label="Previous photo">&#10094;</button>
     <div class="lightbox-box">
       <img id="lightbox-img" src="training.png" alt="Enlarged gallery view">
       <p id="lightbox-caption"></p>
     </div>
-    <button type="button" id="lightbox-next">&#10095;</button>
+    <button type="button" id="lightbox-next" aria-label="Next photo">&#10095;</button>
   </div>
 
   <footer>
@@ -75,7 +81,7 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

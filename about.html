@@ -16,12 +16,18 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="matches.html">Matches</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="header-tools">
+      <button type="button" id="theme-toggle" aria-pressed="false">Dark theme</button>
+      <span id="user-name"></span>
+      <a id="sign-in-link" href="signin.html">Sign in</a>
+      <button type="button" id="sign-out" hidden>Sign out</button>
+    </div>
   </header>
 
   <main>
@@ -50,6 +56,34 @@
         <li>Unity and respect inside the club</li>
       </ul>
     </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">Who can join AITU FC?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" id="faq-1"><p>The club welcomes AITU students who enjoy football and want to improve their skills.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">When does the team train?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" id="faq-2"><p>Our sample training schedule is Tuesday and Thursday, from 6:30 PM to 8:00 PM. Confirm the actual session with the team.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">Do I need previous football experience?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" id="faq-3"><p>Players of different levels can take part in training. Tryouts help the team find suitable roles for each player.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">What should I bring to training?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" id="faq-4"><p>Bring suitable football shoes, sports clothes, shin guards and a water bottle.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5">Where can I see upcoming matches?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" id="faq-5"><p>Visit the Matches page. Use the search field and category buttons to find friendly, league or cup matches.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-6">Where can I learn about professional football clubs?<span class="faq-icon" aria-hidden="true">+</span></button>
+        <div class="faq-answer" id="faq-6"><p>The Home page includes Explore Football Clubs. Select Arsenal, Liverpool or Manchester United and load information about the club from TheSportsDB.</p></div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -63,7 +97,7 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

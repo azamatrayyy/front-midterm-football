@@ -15,13 +15,19 @@
     <a class="logo" href="index.html">AITU FC</a>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="matches.html">Matches</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="header-tools">
+      <button type="button" id="theme-toggle" aria-pressed="false">Dark theme</button>
+      <span id="user-name"></span>
+      <a id="sign-in-link" href="signin.html">Sign in</a>
+      <button type="button" id="sign-out" hidden>Sign out</button>
+    </div>
   </header>
 
   <main>
@@ -66,6 +72,25 @@
         <li>Confidence built through practice</li>
       </ul>
     </section>
+
+    <section class="section" id="football-clubs">
+      <h2>Explore Football Clubs</h2>
+      <p>Discover professional clubs and learn about their leagues and stadiums.</p>
+      <form id="team-form" class="team-controls">
+        <div>
+          <label for="team-select">Football club</label>
+          <select id="team-select" class="form-select">
+            <option value="133604">Arsenal</option>
+            <option value="133602">Liverpool</option>
+            <option value="133612">Manchester United</option>
+          </select>
+        </div>
+        <button id="team-load" class="form-button" type="submit">Load club</button>
+      </form>
+      <p id="team-status" role="status" aria-live="polite"></p>
+      <div id="team-results" aria-busy="false"></div>
+      <p class="api-credit">Club data: <a href="https://www.thesportsdb.com/" target="_blank" rel="noopener">TheSportsDB</a>. Information is provided by the external database.</p>
+    </section>
   </main>
 
   <footer>
@@ -79,7 +104,7 @@
     </div>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
