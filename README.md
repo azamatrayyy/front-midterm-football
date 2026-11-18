@@ -236,7 +236,7 @@ The responsive layout adjusts navigation, images, content blocks, and club infor
 ## 10. Project Links
 
 GitHub repository:
-https://github.com/azamatrayyy/front-midterm-football
+https://github.com/azamatrayyy/front-midterm-football.git
 
 GitHub Pages:
 https://azamatrayyy.github.io/front-midterm-football/
