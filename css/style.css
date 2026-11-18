@@ -792,3 +792,20 @@ body.lightbox-open {
     padding: 0;
   }
 }
+
+footer {
+  flex-wrap: wrap;
+}
+
+footer .ai-credit {
+  flex-basis: 100%;
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.ai-credit a {
+  color: inherit;
+  text-decoration: underline;
+}

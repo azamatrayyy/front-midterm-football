@@ -1,5 +1,5 @@
 # AITU Football Club — Final Project Report
-# Group : IT-2502
+
 ## 1. Project Overview
 
 AITU Football Club is a website dedicated to the student football club at Astana IT University. It introduces the club, presents training information and sample match schedules, displays a photo gallery, and provides an interactive tryout form.
@@ -168,7 +168,7 @@ The form validates information locally and does not send an application to the c
 
 ## 7. Development Process
 
-Development started from our existing Midterm and Endterm website. We preserved the football club topic, original pages, images, and visual style.
+Development started from our existing Endterm website. We preserved the football club topic, original pages, images, and visual style.
 
 The development process included:
 
@@ -185,6 +185,7 @@ The development process included:
 All custom JavaScript is implemented in js/script.js. All custom styles are stored in css/style.css. jQuery is included as a separate library file.
 
 ## 8. Group Responsibilities
+
 
 
 | Member | Responsibilities |
@@ -235,15 +236,31 @@ The responsive layout adjusts navigation, images, content blocks, and club infor
 ## 10. Project Links
 
 GitHub repository:
-https://github.com/azamatrayyy/front-midterm-football.git
+https://github.com/azamatrayyy/front-midterm-football
+
 GitHub Pages:
 https://azamatrayyy.github.io/front-midterm-football/
-
-
-
 
 ## 11. Conclusion
 
 The final project extends the AITU Football Club website with persistent theme preferences, a saved demo profile, animated FAQ answers, and football club information from TheSportsDB.
 
 The website demonstrates responsive design, DOM manipulation, event handling, form validation, localStorage, jQuery effects, and asynchronous JavaScript.
+
+## 12. AI Usage Acknowledgment
+
+During the development of this project, our group used ChatGPT, an AI tool developed by OpenAI, as a supporting tool.
+
+AI assistance included:
+
+- Generating and revising parts of the HTML, CSS, and JavaScript code.
+- Helping debug code and suggesting improvements to page structure, responsive styling, form validation, theme switching, and localStorage functionality.
+- Supporting the selection and implementation of TheSportsDB API and its error handling.
+- Helping consolidate the custom CSS and JavaScript files.
+- Drafting and revising project documentation and preparing code explanations for the group.
+
+This acknowledgment covers AI-generated code and text as well as AI-assisted revisions. Group members remain responsible for reviewing the submitted work, verifying its behavior, understanding the implementation, and accurately explaining their own contributions during the defense. AI assistance does not replace individual understanding or responsibility for the project.
+
+The website includes a visible AI assistance credit in the footer of every page.
+
+Tool credited: ChatGPT by OpenAI — https://chatgpt.com/
